@@ -1,0 +1,14 @@
+@use './variables' as variables;
+
+// Reusable keyboard focus treatment for interactive controls.
+@mixin focus-ring {
+  outline: 0.2rem solid variables.$color-light-cyan;
+  outline-offset: 0.25rem;
+}
+
+// Mobile-first media-query helper.
+@mixin tablet-and-up {
+  @media (min-width: variables.$breakpoint-tablet) {
+    @content;
+  }
+}

@@ -1,0 +1,49 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+
+.advice-card {
+  position: relative;
+  width: min(100%, variables.$card-max-width);
+  padding: 2.5rem 1.5rem 4rem;
+  border-radius: 0.75rem;
+  background: variables.$color-dark-grayish-blue;
+  box-shadow: 0 2rem 4rem hsl(218 23% 10% / 28%);
+  text-align: center;
+
+  &__eyebrow {
+    color: variables.$color-neon-green;
+    font-size: 0.6875rem;
+    letter-spacing: 0.22rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+
+  &__quote {
+    display: grid;
+    min-height: 8.5rem;
+    place-items: center;
+    padding-block: 1.5rem;
+    font-size: variables.$font-size-quote;
+    line-height: 1.35;
+  }
+
+  &__divider {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @include mixins.tablet-and-up {
+    padding: 3rem 3rem 4.5rem;
+    border-radius: 0.9375rem;
+
+    &__quote {
+      min-height: 9.75rem;
+      padding-block: 1.75rem 2.25rem;
+    }
+  }
+}
