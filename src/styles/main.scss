@@ -1,0 +1,6 @@
+// The main stylesheet composes Sass modules in dependency order.
+@use './base/reset';
+@use './base/globals';
+@use './layout/app';
+@use './components/advice-card';
+@use './components/advice-button';

@@ -1,0 +1,48 @@
+@use '../abstracts/mixins' as mixins;
+@use '../abstracts/variables' as variables;
+
+.advice-button {
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  display: grid;
+  width: 4rem;
+  height: 4rem;
+  place-items: center;
+  border-radius: 50%;
+  background: variables.$color-neon-green;
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition:
+    box-shadow variables.$transition-fast,
+    transform variables.$transition-fast;
+
+  &:hover {
+    box-shadow: 0 0 2.25rem variables.$color-neon-green;
+    transform: translate(-50%, -0.125rem);
+  }
+
+  &:active {
+    transform: translate(-50%, 0);
+  }
+
+  &:focus-visible {
+    @include mixins.focus-ring;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .advice-button {
+    transition: none;
+  }
+}

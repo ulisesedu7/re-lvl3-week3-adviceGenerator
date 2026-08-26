@@ -1,0 +1,17 @@
+// Frontend Mentor challenge palette.
+$color-light-cyan: hsl(193 38% 86%);
+$color-neon-green: hsl(150 100% 66%);
+$color-grayish-blue: hsl(217 19% 38%);
+$color-dark-grayish-blue: hsl(217 19% 24%);
+$color-dark-blue: hsl(218 23% 16%);
+$color-error: hsl(0 75% 72%);
+
+// Typography and motion tokens.
+$font-family-primary: 'Manrope', sans-serif;
+$font-weight-extra-bold: 800;
+$font-size-quote: clamp(1.5rem, 1.35rem + 0.65vw, 1.75rem);
+$transition-fast: 180ms ease;
+
+// Layout tokens.
+$card-max-width: 33.75rem;
+$breakpoint-tablet: 36rem;
