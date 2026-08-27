@@ -25,3 +25,6 @@ dist-ssr
 
 # Ignoring the starter pack folder
 starter_pack_fm/
+
+# Ignore env files
+.env

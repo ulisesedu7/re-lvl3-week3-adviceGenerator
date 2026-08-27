@@ -4,6 +4,7 @@
 function AdviceButton({
   onClick,
   isDisabled = false,
+  isLoading = false,
   label = 'Generate another example advice',
 }) {
   return (
@@ -11,15 +12,20 @@ function AdviceButton({
       className="advice-button"
       type="button"
       aria-label={label}
+      aria-busy={isLoading}
       disabled={isDisabled}
       onClick={onClick}
     >
-      <img
-        className="advice-button__icon"
-        src="./images/icon-dice.svg"
-        alt=""
-        aria-hidden="true"
-      />
+      {isLoading ? (
+        <span className="advice-button__spinner" aria-hidden="true" />
+      ) : (
+        <img
+          className="advice-button__icon"
+          src="/images/icon-dice.svg"
+          alt=""
+          aria-hidden="true"
+        />
+      )}
     </button>
   );
 }

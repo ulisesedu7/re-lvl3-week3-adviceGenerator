@@ -15,14 +15,15 @@
   transform: translateX(-50%);
   transition:
     box-shadow variables.$transition-fast,
+    opacity variables.$transition-fast,
     transform variables.$transition-fast;
 
-  &:hover {
+  &:hover:not(:disabled) {
     box-shadow: 0 0 2.25rem variables.$color-neon-green;
     transform: translate(-50%, -0.125rem);
   }
 
-  &:active {
+  &:active:not(:disabled) {
     transform: translate(-50%, 0);
   }
 
@@ -39,10 +40,23 @@
     width: 1.5rem;
     height: 1.5rem;
   }
+
+  &__spinner {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1875rem solid hsl(218 23% 16% / 35%);
+    border-top-color: variables.$color-dark-blue;
+    border-radius: 50%;
+    animation: spin 700ms linear infinite;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .advice-button {
     transition: none;
+  }
+
+  .advice-button__spinner {
+    animation-duration: 1.4s;
   }
 }
