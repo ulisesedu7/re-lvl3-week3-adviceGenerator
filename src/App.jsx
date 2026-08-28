@@ -1,4 +1,4 @@
-import AdviceCard from "./components/AdviceCard";
+import AdviceCard from "./components/AdviceCard/AdviceCard";
 import { useAdvice } from "./hooks/useAdvice";
 
 function App({ cooldownMs }) {

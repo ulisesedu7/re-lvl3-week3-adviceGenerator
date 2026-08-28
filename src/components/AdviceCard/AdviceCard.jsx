@@ -1,4 +1,4 @@
-import AdviceButton from './AdviceButton.jsx';
+import AdviceButton from '../AdviceButton/AdviceButton.jsx';
 
 
 /**
